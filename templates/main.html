@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>Item Details</title>
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet" />
+  </head>
+  <body>
+    <button class="create-button">글 작성하기</button>
+    <div class="no-article hide">글 목록이 없습니다</div>
+    <ul class="article-list"></ul>
+    <form class="article-form hide">
+      <h1>글 작성하기</h1>
+      <div><input name="title" class="title" type="text" placeholder="글 제목" /></div>
+      <div><textarea name="description" class="description" placeholder="글 내용"></textarea></div>
+      <div><input type="submit" /></div>
+    </form>
+
+    <form class="article-update-form hide">
+      <h1>글 수정하기</h1>
+      <div><input name="update-title" class="update-title" type="text" placeholder="글 제목" /></div>
+      <div><textarea name="update-description" class="update-description" placeholder="글 내용"></textarea></div>
+      <div><input type="submit" /></div>
+    </form>
+
+    <section class="article hide">
+      <h1 class="article-title-label">글 제목</h1>
+      <h1 class="article-title"></h1>
+      <div class="article-id-label">글 번호</div>
+      <div class="article-id"></div>
+      <div class="article-description-label">글 내용</div>
+      <div class="article-description"></div>
+      <div><button class="update-button">수정하기</button><button class="delete-button">삭제하기</button></div>
+    </section>
+  </body>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="{{ url_for('static', path='/script.js') }}"></script>
+</html>
